@@ -1,0 +1,13 @@
+img {
+    width: 200px;
+    display: block;
+    margin-left: 400px;
+    margin-bottom: 100px;
+    margin-top: 10px;
+}
+
+label {
+    margin: 5px;
+    width: 250px;
+    display: inline-block;
+}
