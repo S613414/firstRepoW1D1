@@ -1,17 +1,25 @@
-var newAccount = (function() {
-    var listAccounts = {};
-    function addAccount(name, deposit) { //private inner function
-    listAccounts += {
-        "Account name: ":name,
-        "Balance: ":deposit
-    }; }
-    return {
-    createAccount: function() {
-        addAccount(document.getElementById("name").value, document.getElementById("deposit").value)
-    },
-    list: function() {
-        return listAccounts;
+window.onload = function () {
+    document.getElementById("btn").onclick = onClickedFunction;
+}
+var newAccount = (function () {
+    let name, deposit;
+    create = function () {
+        name = document.getElementById("name").value;
+        deposit = document.getElementById("deposit").value;
     }
-    } 
+    create();
+    return {name: name, balance:deposit}
+})
 
-})();
+var accountInfoList = new Array();
+
+function onClickedFunction () {
+    document.getElementById("list").innerText ="";
+    accountInfoList.push(newAccount());
+    var area = document.getElementById("list"); 
+    for (var i = 0; i < accountInfoList.length; i++) { 
+        var text = document.createTextNode("Account name: "+accountInfoList[i].name+"  Balance: "+accountInfoList[i].balance+"\n");
+        area.append(text);
+        document.getElementById("name").value = document.getElementById("deposit").value = "";
+    }
+}
