@@ -15,7 +15,10 @@ var accountInfoList = new Array();
 
 function onClickedFunction () {
     document.getElementById("list").innerText ="";
-    accountInfoList.push(newAccount());
+    let checkFirst = newAccount();
+    if (checkFirst.name != "" && checkFirst.deposit != ""){
+        accountInfoList.push(checkFirst);
+    }
     var area = document.getElementById("list"); 
     for (var i = 0; i < accountInfoList.length; i++) { 
         var text = document.createTextNode("Account name: "+accountInfoList[i].name+"  Balance: "+accountInfoList[i].balance+"\n");
