@@ -205,5 +205,6 @@ function swap(position){ //moves the puzzle piece by switching position with an 
     temp = divs[position].style.left;
     divs[position].style.left = xArea;
     xArea = temp;
+    divs[position].style.backgroundImage = null;
 }
 
