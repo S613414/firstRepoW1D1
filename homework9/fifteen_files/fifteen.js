@@ -19,7 +19,7 @@ window.onload = function () {
         div.style.backgroundPosition = '-' + div.style.left + ' ' + '-' + div.style.top;
         div.onmouseover = function () {
             if (checkMove(parseInt(this.innerHTML))) {
-                this.style.border = "3px solid red";
+                // this.style.border = "3px solid red";
                 this.style.color = "#006600";
                 this.style.textDecoration = "underline";
                 this.style.backgroundImage = "url('background.jpg')";
@@ -28,7 +28,7 @@ window.onload = function () {
 
 
         div.onmouseout = function () {
-            this.style.border = "2px solid black";
+            // this.style.border = "2px solid black";
             this.style.color = "#000000";
             this.style.textDecoration = "none";
         };
@@ -113,7 +113,7 @@ function Notify() {
     } else (notify % 2)
 {
         var body = document.getElementsByTagName('body');
-        body[0].style.backgroundImage = "url('http://assets.pokemon.com/assets/cms2/img/video-games/video-games/pokemon_go/boxart.jpg')";
+        body[0].style.backgroundImage = "url('background.jpg')";
         //sets background pic to show user that they had completed the puzzle
     }
     timer = setTimeout(Notify, 200); //notifies the user for 2 secs
@@ -121,7 +121,7 @@ function Notify() {
 
 function win() { //notifies user that they have won
     var body = document.getElementsByTagName('body');
-    body[0].style.backgroundImage = "url('http://assets.pokemon.com/assets/cms2/img/video-games/video-games/pokemon_go/boxart.jpg')";
+    body[0].style.backgroundImage = "url('background.jpg')";
     notify = 10; //initializes notify variable
     timer = setTimeout(Notify, 200);
     // var para=document.getElementsByClassName('explanation');
@@ -197,8 +197,6 @@ function down(x, y){ //calculates how far down a puzzlepiece should position
         return -1;
     }
 }
-
-
 
 function swap(position){ //moves the puzzle piece by switching position with an empty space
     var temp = divs[position].style.top;
