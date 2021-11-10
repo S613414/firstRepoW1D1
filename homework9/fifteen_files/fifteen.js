@@ -81,6 +81,9 @@ window.onload = function () {
                 }
             }
         }
+        var puzzleArea = document.getElementById('puzzlearea');
+        divs = puzzleArea.getElementsByTagName('div'); //retrieve element within puzzlearea
+        for (var i = 0; i < divs.length; i++) { divs[i].style.backgroundImage = null };
     };
 };
 
@@ -205,6 +208,5 @@ function swap(position){ //moves the puzzle piece by switching position with an 
     temp = divs[position].style.left;
     divs[position].style.left = xArea;
     xArea = temp;
-    divs[position].style.backgroundImage = null;
 }
 
