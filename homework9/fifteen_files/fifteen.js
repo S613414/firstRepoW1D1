@@ -109,7 +109,7 @@ function Notify() {
     if (notify == 0){
         var body = document.getElementsByTagName('body'); //retrieves body element in html
         body[0].style.backgroundImage = "none"; //reverts to original page background
-        alert('Winner! ... Shuffle and Play Again'); //tells the user that they have won the game 
+        alert('Congratulations !!! Do you want to try again ?'); //tells the user that they have won the game 
         // var para=document.getElementsByClassName('explanation');
         // para[0].style.visibility="visible"; //reverts visiblity to its original state
         return;
