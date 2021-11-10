@@ -19,8 +19,8 @@ window.onload = function () {
         div.style.backgroundPosition = '-' + div.style.left + ' ' + '-' + div.style.top;
         div.onmouseover = function () {
             if (checkMove(parseInt(this.innerHTML))) {
-                // this.style.border = "3px solid red";
-                this.style.color = "#006600";
+                this.style.border = "solid red";
+                this.style.color = "red";
                 this.style.textDecoration = "underline";
                 this.style.backgroundImage = "url('background.jpg')";
             }
@@ -28,7 +28,7 @@ window.onload = function () {
 
 
         div.onmouseout = function () {
-            // this.style.border = "2px solid black";
+            this.style.border = "5px solid black";
             this.style.color = "#000000";
             this.style.textDecoration = "none";
         };
